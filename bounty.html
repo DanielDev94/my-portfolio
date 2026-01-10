@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>BOUNTY POSTER</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            .character-name{
+                text-align: center;
+            }
+            .image-container img{
+                width: 100%;
+                border: 5px solid red;
+                display: block;
+                margin: 0 auto;
+            }
+            .bounty-card{
+                background-color: beige;
+                border: thick;
+                width: 300px;
+                margin: 50px auto;
+            }
+            .dead-alive{
+                font-family: 'Bangers', system-ui;
+                letter-spacing: 2px;
+                color: red;
+                text-align: center;
+            }
+            .bounty-amount{
+                font-family: 'Bangers', system-ui;
+                letter-spacing: 2px;
+                color: black;
+                text-align: center;
+                font-size: large;
+                font-weight: bold;
+            }
+            .skill-badge{
+                display: inline-block;
+                background-color: darkgreen;
+                color: white;
+                padding: 5px 10px;
+                font-family: sans-serif;
+            }
+            .skills-container{
+                display: flex;
+                justify-content: center;
+                gap: 10px;
+                margin-top: 15px;
+            }
+            .stats-grid{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 10px;
+                margin-top: 20px;
+            }
+            .stat-box{
+                border: 1px solid black;
+                padding: 5px;
+                text-align: center;
+                background-color: lightgrey;
+            }
+            /* Mobile Optimizations */
+            @media (max-width: 500px) {
+            /* 1. Make the card fill the screen width */
+            .bounty-card {
+                width: 90%;       /* Takes up 90% of the screen width */
+                margin: 20px auto; /* Less vertical margin */
+            }
+
+            /* 2. Stack the stats vertically */
+            .stats-grid {
+                grid-template-columns: 1fr; /* Change to ONE column */
+            }
+            /* 3. Make the name smaller so it doesn't break */
+            .character-name {
+            font-size: 24px;
+            }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="bounty-card">
+    <h2 class="dead-alive">DEAD OR ALIVE</h2>
+    <div class="image-container">
+         <img src="zoro.jpg" alt="Wanted">
+    </div>
+    <h1 class="character-name">RORONOA ZORO</h1>
+    <p class="bounty-amount">$ 320,000,000 -</p>
+    <div class="skills-container">
+    <span class="skill-badge">SWORDSMAN</span>
+    <span class="skill-badge">HAKI</span>
+    <span class="skill-badge">PIRATE</span>
+    </div>
+    <div class="stats-grid">
+    <div class="stat-box">STR: S+</div>
+    <div class="stat-box">SPD: A</div>
+    <div class="stat-box">INT: C</div>
+    <div class="stat-box">LUCK: B</div>
+    </div>
+    </div>
+    </body>
+</html>
