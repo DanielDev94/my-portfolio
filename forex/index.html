@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Forex Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="currency-card">
+        <h1>💱 Currency Converter</h1>
+        
+        <div class="controls">
+            <select id="currency-one">
+                <option value="USD" selected>USD</option>
+                <option value="NGN">NGN</option>
+                <option value="EUR">EUR</option>
+                <option value="GBP">GBP</option>
+                <option value="JPY">JPY</option>
+            </select>
+            
+            <input type="number" id="amount-one" value="1" />
+        </div>
+
+        <div class="swap-rate-container">
+            <button class="btn" id="swap">Swap ⇅</button>
+            <div class="rate" id="rate">1 USD = ... NGN</div>
+        </div>
+
+        <div class="controls">
+            <select id="currency-two">
+                <option value="USD">USD</option>
+                <option value="NGN" selected>NGN</option>
+                <option value="EUR">EUR</option>
+                <option value="GBP">GBP</option>
+                <option value="JPY">JPY</option>
+            </select>
+            
+            <input type="number" id="amount-two" placeholder="0" />
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
