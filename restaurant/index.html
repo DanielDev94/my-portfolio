@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Kitchen | Order Fresh</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">🍲 Local Kitchen</div>
+        <div class="cart-icon">
+            🛒 Cart <span id="cart-count">0</span>
+        </div>
+    </header>
+
+    <main class="app-container">
+        
+        <section class="menu-section">
+            <h2>Our Menu</h2>
+            
+            <div class="menu-grid" id="menu-grid">
+            </div>
+        </section>
+
+        <aside class="cart-section">
+            <h2>Your Order</h2>
+            
+            <div class="cart-items" id="cart-items">
+                <p class="empty-msg">Your cart is empty.</p> 
+            </div>
+            
+            <div class="cart-summary">
+                <div class="total">
+                    <span>Total:</span>
+                    <span id="total-price">₦0</span>
+                </div>
+                <button class="checkout-btn" id="checkout-btn">Checkout</button>
+            </div>
+        </aside>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,168 @@
+/* --- 1. Base Reset & Typography --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f8f9fa; /* Light grey background */
+    color: #333;
+}
+
+/* --- 2. The Navigation Bar --- */
+header {
+    background-color: #ff4757; /* Appetizing Red */
+    color: white;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* --- 3. The Main Layout (Flexbox) --- */
+.app-container {
+    display: flex;
+    gap: 30px;
+    padding: 30px 40px;
+    max-width: 1400px;
+    margin: 0 auto; /* Centers the app on giant screens */
+    align-items: flex-start; /* Prevents the cart from stretching down */
+}
+
+/* --- 4. The Menu Section (Left Side) --- */
+.menu-section {
+    flex: 2; /* Takes up 2 parts of the space */
+}
+
+.menu-section h2 {
+    margin-bottom: 20px;
+    color: #2d3436;
+}
+
+/* The Grid inside the Menu Section */
+.menu-grid {
+    display: grid;
+    /* This creates responsive columns that auto-fit the screen! */
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); 
+    gap: 20px;
+}
+
+/* Individual Food Cards */
+.menu-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    text-align: center;
+    transition: transform 0.2s; /* Smooth hover effect */
+}
+
+.menu-card:hover {
+    transform: translateY(-5px); /* Lifts the card up slightly */
+}
+
+.menu-card h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.category {
+    color: #888;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-weight: bold;
+    color: #ff4757;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+/* --- 5. The Cart Section (Right Side) --- */
+.cart-section {
+    flex: 1; /* Takes up 1 part of the space */
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    position: sticky; /* Keeps the cart on screen when scrolling down */
+    top: 20px; 
+}
+
+.cart-section h2 {
+    margin-bottom: 20px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+.empty-msg {
+    color: #999;
+    font-style: italic;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.cart-summary {
+    margin-top: 30px;
+    border-top: 2px solid #eee;
+    padding-top: 20px;
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* --- 6. Buttons --- */
+button {
+    background-color: #ff4757;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #ff6b81;
+}
+/* --- 7. Cart Items Display --- */
+.cart-item-display {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    font-size: 15px;
+}
+
+.remove-btn {
+    background-color: #ff7675;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: auto; /* Overrides the 100% width from earlier */
+    font-size: 12px;
+}
+
+.remove-btn:hover {
+    background-color: #d63031;
+}
