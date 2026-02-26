@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Home Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="dashboard-container">
+        
+        <header>
+            <h1><i class="fas fa-home"></i> Daniel's HQ</h1>
+            <div class="status-badge online" id="system-status">
+                <span class="dot"></span> Online
+            </div>
+        </header>
+
+        <div class="devices-grid">
+
+            <div class="card" id="light-card">
+                <div class="icon-box">
+                    <i class="fas fa-lightbulb" id="light-icon"></i>
+                </div>
+                <h3>Living Room</h3>
+                <p>Smart Bulb</p>
+                
+                <label class="switch">
+                    <input type="checkbox" id="light-toggle">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+
+            <div class="card">
+                <div class="icon-box fan-box">
+                    <i class="fas fa-fan" id="fan-icon"></i>
+                </div>
+                <h3>Cooling Fan</h3>
+                <p>Speed: <span id="fan-speed-display">0</span>%</p>
+                
+                <input type="range" min="0" max="100" value="0" class="range-slider" id="fan-slider">
+            </div>
+
+            <div class="card">
+                <div class="icon-box temp-box">
+                    <i class="fas fa-temperature-high"></i>
+                </div>
+                <h3>Temperature</h3>
+                <p>Living Room</p>
+                
+                <h2 class="sensor-value"><span id="temp-display">24</span>°C</h2>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
